@@ -48,7 +48,7 @@ public class LogInFormTests {
     }
 
     @Test
-    public void checkLthValidCredentials(){
+    public void checkPasswordIsMasked(){
         driver.findElement(By.xpath("//a[@class='authLinks redButton']")).click();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//input[@name='password']")).sendKeys(PASSWORD);
@@ -56,7 +56,7 @@ public class LogInFormTests {
     }
 
     @Test
-    public void check(){
+    public void checkLogInWithInvalidPassword(){
         driver.findElement(By.xpath("//a[@class='authLinks redButton']")).click();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//input[@name='userLoginId']")).sendKeys(INVALID_EMAIL);
