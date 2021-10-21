@@ -47,7 +47,7 @@ public class LogInFormTests {
         assertEquals(driver.getCurrentUrl(),URL);
     }
 
-    @Test(priority = 1)
+    @Test
     public void checkLthValidCredentials(){
         driver.findElement(By.xpath("//a[@class='authLinks redButton']")).click();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -55,7 +55,7 @@ public class LogInFormTests {
         assertEquals(driver.findElement(By.xpath("//input[@name='password']")).getAttribute("type"),"password");
     }
 
-    @Test(priority = 1)
+    @Test
     public void check(){
         driver.findElement(By.xpath("//a[@class='authLinks redButton']")).click();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
